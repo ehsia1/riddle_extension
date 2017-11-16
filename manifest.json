@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "riddle_extension",
+  "version": "0.0.0.1",
+  "browser_action": {
+    "default_title": "Riddle Generator",
+    "default_icon": "./src/icon.png",
+    "default_popup": "./src/popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
