@@ -2,13 +2,13 @@ const path = require('path');
 
 module.exports = {
 
-  entry: [
-    './src/scripts/index.js'
-  ],
+  entry: {
+    preload: './src/scripts/index.js'
+  },
 
   output: {
     filename: 'popup.js',
-    path: path.join(__dirname, '../', 'build'),
+    path: path.join(__dirname, '../../', 'build'),
     publicPath: '/'
   },
 

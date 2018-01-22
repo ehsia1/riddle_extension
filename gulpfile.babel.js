@@ -10,10 +10,13 @@ import popupWebpackConfig from './src/popup/webpack.config';
 // import contentWebpackConfig from './src/content/webpack.config';
 
 gulp.task('popup-js', (cb) => {
+  popupWebpackConfig.entry.preload = './src/popup/src/scripts/index.js';
   webpack(popupWebpackConfig, (err, stats) => {
     if(err) throw new plugins.util.PluginError('webpack', err);
 
-    plugins.util.log('[webpack]', stats.toString());
+    plugins.util.log('[webpack]', stats.toString({
+      colors: true
+    }));
 
     cb();
   });
