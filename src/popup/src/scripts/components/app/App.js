@@ -3,7 +3,7 @@ import React from 'react';
 class App extends React.Component {
   render() {
     <div>
-      Hello World!
+      What gets wetter as it dries?
     </div>
   }
 }
