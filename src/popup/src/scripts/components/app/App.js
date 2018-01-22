@@ -2,9 +2,11 @@ import React from 'react';
 
 class App extends React.Component {
   render() {
-    <div>
-      What gets wetter as it dries?
-    </div>
+    return (
+      <div>
+        What gets wetter as it dries?
+      </div>
+    );
   }
 }
 
