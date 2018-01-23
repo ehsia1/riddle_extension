@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 const Textbox = (props) => (
     <div>
-      <form onSubmit={(event) => { props.onSubmit(event); }}>
+      <form onSubmit={props.onSubmit}>
         <label>
           Answer:
-          <input type="text" />
+          <input type="text" onChange={(e) => { props.onChange(e); }}/>
         </label>
         <input type="submit" value="Submit" />
       </form>
@@ -15,6 +15,7 @@ const Textbox = (props) => (
 
 Textbox.propTypes = {
   onSubmit: PropTypes.func,
+  onChange: PropTypes.func,
 };
 
 export default Textbox;
