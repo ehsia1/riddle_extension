@@ -1,19 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-class Textbox extends React.Component {
-  render() {
-    return (
-      <div>
-        <form>
-          <label>
-            Answer:
-            <input type="text" />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
-      </div>
-    );
-  }
-}
+const Textbox = (props) => (
+    <div>
+      <form onSubmit={(event) => { props.onSubmit(event); }}>
+        <label>
+          Answer:
+          <input type="text" />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  );
+
+Textbox.propTypes = {
+  onSubmit: PropTypes.func,
+};
 
 export default Textbox;

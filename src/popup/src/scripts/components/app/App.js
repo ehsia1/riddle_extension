@@ -1,12 +1,28 @@
 import React from 'react';
-import Textbox from '../text/Textbox'
+import TextboxController from '../text/TextboxController'
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      correctAnswer: 'A towel',
+    };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    if (event.target.value === this.state.correctAnswer) {
+      alert("Yay!");
+    }
+  }
+
   render() {
     return (
       <div>
         What gets wetter as it dries?
-        <Textbox/>
+        <TextboxController onSubmit={this.handleSubmit} />
       </div>
     );
   }
